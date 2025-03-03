@@ -1,11 +1,9 @@
 "use client";
 
+import { SignIn } from "@clerk/nextjs";
+
 function SignInPage() {
-  return (
-    <div>
-      <h2>SignIn</h2>
-    </div>
-  );
+  return <SignIn />;
 }
 
 export default SignInPage;

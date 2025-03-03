@@ -1,10 +1,22 @@
-import React from "react";
+import Cta from "@/components/Cta";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Plans from "@/components/Plans";
+import Steps from "@/components/Steps";
 
 function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Features />
+        <Steps />
+        <Plans />
+        <Cta />
+      </main>
+      <Footer />
+    </>
   );
 }
 

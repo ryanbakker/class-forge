@@ -1,3 +1,4 @@
+import ClientWrapper from "@/components/providers/ClientWrapper";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 
@@ -13,12 +14,9 @@ export const metadata: Metadata = {
 
 function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <html>
-      <body suppressHydrationWarning>
-        <h2>Dashboard Layout</h2>
-        {children}
-      </body>
-    </html>
+    <body suppressHydrationWarning>
+      <ClientWrapper>{children}</ClientWrapper>
+    </body>
   );
 }
 

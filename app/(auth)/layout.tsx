@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
+import ClientWrapper from "@/components/providers/ClientWrapper";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -13,8 +14,7 @@ export const metadata: Metadata = {
 function AuthLayout({ children }: AuthLayoutProps) {
   return (
     <body suppressHydrationWarning>
-      <h2>Auth Layout</h2>
-      {children}
+      <ClientWrapper>{children}</ClientWrapper>
     </body>
   );
 }

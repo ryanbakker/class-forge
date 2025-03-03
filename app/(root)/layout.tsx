@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
+import ClientWrapper from "@/components/providers/ClientWrapper";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -12,9 +13,8 @@ export const metadata: Metadata = {
 
 function RootLayout({ children }: RootLayoutProps) {
   return (
-    <body suppressHydrationWarning>
-      <h2>Root Layout</h2>
-      {children}
+    <body suppressHydrationWarning className="flex flex-col">
+      <ClientWrapper>{children}</ClientWrapper>
     </body>
   );
 }
