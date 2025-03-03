@@ -46,20 +46,20 @@ const features = [
 
 function Features() {
   return (
-    <section className="py-20 shadow-xl">
-      <div className="container mx-auto">
+    <section className="py-20 shadow-xl dark:bg-neutral-950">
+      <div className="container! mx-4 md:mx-auto">
         <h3 className="text-4xl font-bold pb-8 bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-fuchsia-600 underline underline-offset-6 decoration-orange-600 decoration-2">
           Features
         </h3>
       </div>
-      <div className="container mx-auto flex flex-col items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="container md:mx-auto flex flex-col items-center px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
           {features.map((feature, index) => {
             const Icon = feature.icon;
 
             return (
               <div key={index} className="flex cursor-default">
-                <div className="bg-gradient-to-tr z-50 from-orange-200/20 to-fuchsia-200/20 p-5 rounded-lg hover:scale-[1.01] hover:from-orange-200/60 hover:to-fuchsia-200/60 transition-all">
+                <div className="bg-gradient-to-tr z-50 from-orange-200/20 to-fuchsia-200/20 p-5 rounded-lg hover:scale-[1.01] hover:from-orange-200/60 hover:to-fuchsia-200/60 transition-all dark:from-orange-200/70 dark:to-fuchsia-200/70 dark:hover:from-orange-200/80 dark:hover:to-fuchsia-200/80">
                   <div className="flex flex-row gap-3 items-end pb-3">
                     <span className="bg-fuchsia-300/20 p-2.5 rounded-lg flex items-center justify-center border border-fuchsia-300/30">
                       <Icon className="h-5 w-5 text-fuchsia-800" />

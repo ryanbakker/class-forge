@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="overflow-x-hidden">
         <Features />
         <Steps />
         <Plans />
