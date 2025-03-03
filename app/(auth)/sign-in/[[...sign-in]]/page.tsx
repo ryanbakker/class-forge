@@ -36,7 +36,7 @@ export default function SignInPage() {
               href="/sign-up"
               className="text-xs text-center text-gray-400 pt-4 hover:underline"
             >
-              Don't have an account?
+              Don&apos;t have an account?
             </Link>
 
             <Link

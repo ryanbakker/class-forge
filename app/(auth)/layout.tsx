@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 import ClientWrapper from "../../components/providers/ClientWrapper";
-import Link from "next/link";
-import { Rocket } from "lucide-react";
 import { Metadata } from "next";
 import { BsFire } from "react-icons/bs";
 
