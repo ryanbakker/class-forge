@@ -13,6 +13,11 @@ Button:hover {
   @apply cursor-pointer
 }
 
+@layer utilities {
+  a.group-data-\[collapsible\=icon\]\:size-8\!:is(:where(.group)[data-collapsible="icon"] *), a.group-data-\[collapsible\=icon\]\:size-8\!:is(:where(.group)[data-collapsible="icon"] *) {
+    width: calc(var(--spacing) * 9.8) !important;
+  } 
+}
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

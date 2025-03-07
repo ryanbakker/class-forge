@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { Sunrise, Sunset } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -23,8 +23,8 @@ export default function ModeToggle() {
           size="icon"
           className="bg-white  dark:border-white dark:hover:bg-neutral-800 dark:hover:border-neutral-800 transition-all group"
         >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 dark:text-orange-900! dark:group-hover:text-orange-500" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 dark:text-orange-900! dark:group-hover:text-orange-500" />
+          <Sunset className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 dark:text-orange-900! dark:group-hover:text-orange-500" />
+          <Sunrise className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 dark:text-orange-900! dark:group-hover:text-orange-500" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>

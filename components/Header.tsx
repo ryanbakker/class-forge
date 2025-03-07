@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className="bg-gradient-to-tr from-orange-600 to-fuchsia-400 dark:from-orange-800 dark:to-fuchsia-700 transition-colors">
       <div className="container mx-auto">
-        <div className="flex px-3 flex-row items-center justify-between h-16">
+        <nav className="flex px-3 flex-row items-center justify-between h-16">
           <div className="flex items-center gap-1">
             <BsFire className="text-white h-7 w-7" />
             <h2 className="text-2xl font-extrabold text-white">ClassForge</h2>
@@ -27,7 +27,7 @@ function Header() {
               <Link href="/sign-in">
                 <Button
                   variant="secondary"
-                  className="flex flex-row items-center uppercase px-6! text-orange-900 dark:text-orange-100 transition-all hover:bg-orange-100"
+                  className="flex flex-row items-center uppercase px-6! text-orange-900 dark:text-orange-100 transition-all hover:bg-orange-100 dark:hover:bg-fuchsia-950"
                 >
                   Sign in
                   <BiLogIn />
@@ -40,7 +40,7 @@ function Header() {
                 <Link href="/manage-plan" className="hidden md:block">
                   <Button
                     variant="secondary"
-                    className="flex flex-row items-center uppercase text-orange-900 dark:text-orange-100 transition-all hover:bg-orange-100"
+                    className="flex flex-row items-center uppercase text-orange-900 dark:text-orange-100 transition-all hover:bg-orange-100 dark:hover:bg-fuchsia-950"
                   >
                     Manage Plan
                     <FaArrowAltCircleRight />
@@ -53,7 +53,7 @@ function Header() {
               </div>
             </SignedIn>
           </div>
-        </div>
+        </nav>
       </div>
 
       <div className="flex flex-col justify-between gap-12 items-center pt-20 pb-28">
@@ -77,7 +77,7 @@ function Header() {
             <Link href="/dashboard">
               <Button
                 variant="secondary"
-                className="flex items-center text-orange-900 w-[300px] md:w-[170px] py-5! cursor-pointer hover:bg-orange-100 transition-all dark:text-orange-100"
+                className="flex items-center text-orange-900 w-[300px] md:w-[170px] py-5! cursor-pointer hover:bg-orange-100 transition-all dark:text-orange-100 dark:hover:bg-fuchsia-950"
               >
                 <RiDashboardFill />
                 Dashboard
@@ -87,7 +87,7 @@ function Header() {
             <Link href="/sign-up">
               <Button
                 variant="secondary"
-                className="flex items-center text-orange-900 w-[300px] md:w-[170px] py-5! cursor-pointer hover:bg-orange-100 transition-all dark:text-orange-100"
+                className="flex items-center text-orange-900 w-[300px] md:w-[170px] py-5! cursor-pointer hover:bg-orange-100 transition-all dark:text-orange-100 dark:hover:bg-fuchsia-950"
               >
                 <FaUser />
                 Create Account

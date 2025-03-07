@@ -1,9 +1,7 @@
-import React from "react";
-
 function Dashboard() {
   return (
-    <div>
-      <h2>Dashboard</h2>
+    <div className="container mx-auto">
+      <h2>This is the dashboard</h2>
     </div>
   );
 }

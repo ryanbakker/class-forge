@@ -5,6 +5,8 @@ import { FaUser } from "react-icons/fa";
 import { FaPaintBrush } from "react-icons/fa";
 import { TbTargetArrow } from "react-icons/tb";
 
+// bg-gradient-to-tr z-50 from-orange-200/20 to-fuchsia-200/20 p-5 rounded-lg hover:scale-[1.01] hover:from-orange-200/60 hover:to-fuchsia-200/60 transition-all dark:from-orange-200/70 dark:to-fuchsia-200/70 dark:hover:from-orange-200/80 dark:hover:to-fuchsia-200/80
+
 const features = [
   {
     title: "Content",
@@ -59,17 +61,19 @@ function Features() {
 
             return (
               <div key={index} className="flex cursor-default">
-                <div className="bg-gradient-to-tr z-50 from-orange-200/20 to-fuchsia-200/20 p-5 rounded-lg hover:scale-[1.01] hover:from-orange-200/60 hover:to-fuchsia-200/60 transition-all dark:from-orange-200/70 dark:to-fuchsia-200/70 dark:hover:from-orange-200/80 dark:hover:to-fuchsia-200/80">
+                <div className="z-50 p-5 rounded-lg hover:scale-[1.01] dark:bg-fuchsia-900/30 border dark:border-fuchsia-600/40  border-fuchsia-500/50 bg-gradient-to-tr from-orange-200/20 to-fuchsia-200/20  hover:from-orange-200/60 hover:to-fuchsia-200/60 transition-all w-full max-w-[420px]">
                   <div className="flex flex-row gap-3 items-end pb-3">
-                    <span className="bg-fuchsia-300/20 p-2.5 rounded-lg flex items-center justify-center border border-fuchsia-300/30">
-                      <Icon className="h-5 w-5 text-fuchsia-800" />
+                    <span className=" p-2.5 rounded-lg flex items-center justify-center dark:bg-fuchsia-900/30 border dark:border-fuchsia-600/40 bg-orange-100/30 border-fuchsia-500/50">
+                      <Icon className="h-5 w-5 dark:text-fuchsia-800 text-fuchsia-900" />
                     </span>
-                    <h4 className="text-lg font-semibold text-fuchsia-900">
+                    <h4 className="text-lg font-semibold text-fuchsia-700">
                       {feature.title}
                     </h4>
                   </div>
 
-                  <p className="text-sm text-black/70">{feature.description}</p>
+                  <p className="text-sm dark:text-fuchsia-200 text-neutral-500">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
             );

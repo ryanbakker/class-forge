@@ -1,4 +1,11 @@
+import { AppSidebar } from "@/components/AppSidebar";
+// import Footer from "@/components/Footer";
 import ClientWrapper from "@/components/providers/ClientWrapper";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 
@@ -15,7 +22,18 @@ export const metadata: Metadata = {
 function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <body suppressHydrationWarning>
-      <ClientWrapper>{children}</ClientWrapper>
+      <ClientWrapper>
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <main>
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarInset>
+          {/* <Footer /> */}
+        </SidebarProvider>
+      </ClientWrapper>
     </body>
   );
 }
