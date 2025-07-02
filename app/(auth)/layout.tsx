@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Class Forge",
   description: "Create modern online courses with ease today!",
 };
 
-// Root layout
+// Sign in / up layout
 
 export default function RootLayout({
   children,
@@ -14,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body suppressHydrationWarning>{children}</body>
-    </html>
+    <ClerkProvider afterSignOutUrl="/">
+      <html lang="en">
+        <body suppressHydrationWarning>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
