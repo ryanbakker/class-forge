@@ -14,6 +14,7 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
 } from "@/components/ui/breadcrumb";
+import SearchInput from "@/components/SearchInput";
 
 export const metadata: Metadata = {
   title: "Class Forge | Courses",
@@ -22,42 +23,43 @@ export const metadata: Metadata = {
 
 // Dashboard layout
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/">
-      <html lang="en">
-        <body suppressHydrationWarning>
-          <SidebarProvider>
-            <AppSidebar />
-            <SidebarInset>
-              <header className="p-3 flex items-center space-x-3">
-                <SidebarTrigger
-                  variant="secondary"
-                  size="lg"
-                  className="cursor-pointer"
-                  aria-label="Toggle sidebar"
-                  title="Toggle sidebar"
-                />
-                <Separator orientation="vertical" />
-                <Breadcrumb>
-                  <BreadcrumbList>
-                    <BreadcrumbItem>
-                      <BreadcrumbLink href="/dashboard">
-                        Explore Courses
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                  </BreadcrumbList>
-                </Breadcrumb>
-              </header>
-              <main className="p-3">{children}</main>
-            </SidebarInset>
-          </SidebarProvider>
-        </body>
-      </html>
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header className="py-3 flex items-center space-x-3 container px-4 mx-auto">
+            <SidebarTrigger
+              variant="secondary"
+              size="lg"
+              className="cursor-pointer"
+              aria-label="Toggle sidebar"
+              title="Toggle sidebar"
+            />
+            <Separator orientation="vertical" />
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/dashboard">
+                    Explore Courses
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+
+            <SearchInput />
+          </header>
+          <div className="mx-3">
+            <Separator />
+          </div>
+          {children}
+        </SidebarInset>
+      </SidebarProvider>
     </ClerkProvider>
   );
 }

@@ -120,3 +120,57 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.section-title {
+  @apply text-3xl md:text-4xl font-extrabold bg-gradient-to-tr from-amber-500 dark:from-amber-700 to-pink-500 dark:to-pink-700 bg-clip-text text-transparent;
+}
+
+/* Feature Box Hover Effect */
+.feature-box {
+  position: relative;
+  z-index: 0;
+  @apply border border-zinc-200 dark:border-pink-400 bg-gradient-to-tr from-amber-50/60 to-pink-50/60 dark:from-zinc-800 dark:to-zinc-900;
+}
+.feature-box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(251, 191, 36, 0.18) 0%, /* amber-400/amber-500 */
+    rgba(236, 72, 153, 0.18) 40%, /* pink-500 */
+    transparent 70%
+  );
+}
+.feature-box:hover::before,
+.feature-box:focus-visible::before {
+  opacity: 1;
+}
+.feature-box {
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.feature-box:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.15), 0 1.5px 6px 0 rgba(0,0,0,0.05);
+  @apply border-pink-300 dark:border-pink-300;
+}
+
+.pricing-btn {
+  @apply mt-auto w-full py-2 rounded-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 cursor-pointer;
+}
+
+.price-box {
+  @apply relative rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-700 p-8 flex flex-col bg-gradient-to-br transition-all duration-300;
+}
+
+.price-box:hover {
+  @apply border-pink-300 dark:border-pink-300;
+}

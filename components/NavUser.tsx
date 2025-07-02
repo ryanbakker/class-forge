@@ -9,6 +9,7 @@ import {
   Image,
   LogOut,
   Sparkles,
+  SunMoon,
 } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -29,6 +30,7 @@ import {
 } from "@/components/ui/sidebar";
 import { SignOutButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
+import ThemeToggleAlt from "./ThemeToggleAlt";
 
 export function NavUser() {
   const { isMobile } = useSidebar();
@@ -80,6 +82,13 @@ export function NavUser() {
                 </div>
               </div>
             </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem className="cursor-pointer">
+              <span className="flex flex-row items-center gap-2">
+                <SunMoon />
+                <ThemeToggleAlt />
+              </span>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer">
               <Link href="/#contact">
